@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var plant={
+				name:"小明",
+				age:18,
+				sum:function(a,b){
+					return a+b
+				},
+				talck:function(){
+					return "我的名字是"+this.name+"。我的年龄是"+this.age+"。我会敲代码"
+				}
+			}
+			console.log(plant.sum(4,5))
+			console.log(plant.name)
+			console.log(plant.talck())
+			var track=plant.talck;
+			console.log(track())
+		</script>
+	</body>
+</html>

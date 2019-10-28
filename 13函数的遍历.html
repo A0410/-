@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[1,2,3,4,5,6,7,8,9]
+			//箭头函数简写版
+			arr.forEach(i=>console.log(i))
+			//无简写版
+			arr.forEach(function(i){
+				console.log(i)
+			})
+			//
+			var total=0
+			arr.forEach(i=>total+=i)
+			console.log(total)
+			//大于5的改成1，小于5的改成0
+			var res=arr.map(i=>i<5?0:1)
+			//所有项加一
+			//var res=arr.map(i=>i+1)
+			console.log(res)
+			//能被三整除的留下
+			var res2=arr.filter(i=>i%3==0)
+			console.log(res2)
+			//用filter删除
+			var arr2=[
+			{id:1,name:"手机",price:8000},
+			{id:2,name:"电脑",price:18000},
+			{id:3,name:"电视",price:28000},
+			{id:4,name:"冰箱",price:9000}
+			]
+			//大于10000的不要
+			var res3=arr2.filter(i=>i.price<10000)
+			console.log(res3)
+			//删除电视
+			//var res3=arr2.filter(i=>i.id!=3)
+			//console.log(res3)
+			//用find查找第一个6
+			var arr3=[1,2,3,4,5,6,7,8,9]
+			var res4=arr3.find(i=>i==6)
+			console.log(res4)
+		</script>
+	</body>
+</html>

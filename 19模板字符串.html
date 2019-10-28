@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//在模板字符串中用${}里面就可以填变量
+			function getdate(){
+				//获取系统当前时间
+				var time=new Date();
+				console.dir(time)
+				//获取年
+				var year=time.getFullYear();
+				//获取月
+				var month=time.getMonth();
+				//获取日
+				var day=time.getDate();
+				//获取星期几
+				var week=time.getDay();
+				var week1="日一二三四五六";
+				var week2=week1[week]
+				//获取时
+				var hours=time.getHours();
+				//获取分
+				var minutes=time.getMinutes();
+				//获取秒
+				var seconds=time.getSeconds();
+				console.log(`${year}年${month}月${day}日${hours}:${minutes}:${seconds}星期${week2}`)
+			}
+			getdate()
+		</script>
+	</body>
+</html>

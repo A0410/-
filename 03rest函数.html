@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function sum(...arr)
+			{
+//				var sun=0;
+//				for (var i=0;i<arr.length;i++){
+//					sun+=arr[i]
+//				}
+//				console.log(sun)
+//              以上等于以下
+				console.log(arr.reduce((t,a)=>t+a))
+			}
+			sum(1,2)
+			sum(4,56,78,910)
+			function sum2(a,...ab)
+			{
+				console.log(a,ab)
+			}
+			sum2(1,2,3)
+			sum2(4,5,6)
+			sum2(7,8,9)
+			
+			function sum3()
+			{
+				console.log(arguments)
+				var ac=0;
+				for (var i=0;i<arguments.length;i++){
+					ac+=arguments[i]
+				}
+				console.log(ac)
+			}
+			sum3(1,2,3,4,5,6)
+			sum3(11,22,33,44,55,66)
+			sum3(111,222,333,444,555,666)
+		</script>
+	</body>
+</html>

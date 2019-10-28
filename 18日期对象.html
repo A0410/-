@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getdate(){
+				//获取系统当前时间
+				var time=new Date();
+				console.dir(time)
+				//获取年
+				var year=time.getFullYear();
+				//获取月
+				var month=time.getMonth();
+				//获取日
+				var day=time.getDate();
+				//获取星期几
+				var week=time.getDay();
+				//获取时
+				var hours=time.getHours();
+				//获取分
+				var minutes=time.getMinutes();
+				//获取秒
+				var seconds=time.getSeconds();
+			}
+			getdate()
+		</script>
+	</body>
+</html>

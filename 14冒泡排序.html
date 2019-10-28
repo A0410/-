@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		//i是比较的次数
+		//arr.length-1是比较的总次数=数组长度-1
+		//arr.length-1-i每一轮比较的次数=每一次比较次数-1求出最终结果
+		//交换的两种方式使用第三方变量就是两两交换，不使用第三方变量就是用两数和计算，进行交换
+		<script type="text/javascript">
+			//使用第三方变量方法
+			var ary=[10,9,8,7,6,5,4,3,2,1]
+			function yellow(ary)
+			{
+				//轮数
+				for(var i=0;i<ary.length-1;i++)
+				{
+					//定义第三个项（空）
+					var arr=null;
+					//次数
+					for (var j=0;j<ary.length-1-i;j++){
+						//如果当前数字大于后一个数字
+						//那么就把当前项赋值给arr，arr赋值给下一个项
+						//下一个项赋值给arr进行交换
+						if(ary[j]>ary[j+1]){
+							arr=ary[j]
+							ary[j]=ary[j+1]
+							ary[j+1]=arr;
+						}
+					}
+				}
+				return ary;
+			}
+			var res=yellow(ary);
+			console.log(res)
+			
+			
+			
+			//排序优化，用加减法进行排序
+			var ary1=[10,9,8,7,6,5,4,3,2,1,11,12,13,14,15,16,17,18,19,20,21]
+			function black(ary1)
+			{
+				//定义一个变量为false
+				var flag=false;
+				for(var i=0;i<ary1.length-1;i++)
+				{
+					for (var j=0;j<ary1.length-1-i;j++)
+					{
+						//如果第二项大于第一项
+						if(ary1[j]>ary1[j+1])
+						{
+							ary1[j]=ary1[j]+ary1[j+1];//把两数和赋给第一项
+							ary1[j+1]=ary1[j]-ary1[j+1];//用和减去第二项所得的值赋给第一项进行交换
+							ary1[j]=ary1[j]-ary1[j+1];//用和减去第一项，进行交换
+							flag=true;
+						}
+					}
+					//如果第一轮有进行交换，继续进行下一轮，给flag的值重新变成false；如果没有则结束循环
+					if(flag)
+					{
+						flag=false;
+					}
+					else
+					{
+						break;
+					}
+				}
+				return ary1;
+			}
+			var res1=black(ary1)
+			console.log(res1)
+		</script>
+	</body>
+</html>

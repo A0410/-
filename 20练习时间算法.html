@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function datediff(a){
+				var date=new Date();//当前系统时间
+				var diff=new Date(a);//设定的截止日期
+				var ffte=diff-date;//计算剩余时间
+				console.log(ffte)//输出剩余时间，结果为时间戳以毫秒显示
+				//计算年
+				var year=Math.floor(ffte/(365*1000*60*60*24))//剩余时间除以365天1000毫秒60秒60分24小时
+				//计算日
+				var day=Math.floor(ffte%(365*1000*60*60*24)/(1000*60*60*24))
+				//算小时
+				var hours=Math.floor(ffte%(365*1000*60*60*24)%(1000*60*60*24)/(1000*60*60))
+				//算分钟
+				var minutes=Math.floor(ffte%(365*1000*60*60*24)%(1000*60*60*24)%(1000*60*60)/(1000*60))
+				//算秒
+				var seconds=Math.floor(ffte%(365*1000*60*60*24)%(1000*60*60*24)%(1000*60*60)%(1000*60)/1000)
+				console.log(year,day,hours,minutes,seconds)
+				
+			}
+		</script>
+	</body>
+</html>

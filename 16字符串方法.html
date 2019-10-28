@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var ary="abcdefg"
+			//根据索引找字符
+			console.log(ary.charAt(2))
+			//根据索引找到对应字符的un码值
+			console.log(ary.charCodeAt(0))
+			//从索引2开始拷贝3个字符
+			console.log(ary.substr(2,3))
+			//从索引2开始拷贝到索引6处，不包括索引6
+			console.log(ary.slice(2,6))
+			//从索引1开始拷贝到结尾
+			console.log(ary.slice(1))
+			console.log(ary.substr(1))
+			//根据字符找到索引
+			console.log(ary.indexOf("a"))
+			//字符串转化为大写
+			console.log(ary.toUpperCase())
+			//字符串转化为小写
+			console.log(ary.toLowerCase())
+			//把字符串按照指定字符进行分割
+			console.log(ary.split(""))
+			//把a替换成abc
+			console.log(ary.replace("a","abc"))
+			//正则把所有的abc都替换成a
+			console.log(ary.replace(/abc/g,"a"))
+			//
+			var time="2019/3/5 11:35:35"
+			
+			console.log(ary.match())
+		</script>
+	</body>
+</html>
